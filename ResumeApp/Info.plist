@@ -20,6 +20,22 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>JosefinSans.ttf</string>
+		<string>JosefinSans1.ttf</string>
+		<string>JosefinSans2.ttf</string>
+		<string>JosefinSans3.ttf</string>
+		<string>JosefinSans4.ttf</string>
+		<string>JosefinSans5.ttf</string>
+		<string>JosefinSans6.ttf</string>
+		<string>JosefinSans7.ttf</string>
+		<string>JosefinSans8.ttf</string>
+		<string>JosefinSans9.ttf</string>
+		<string>JosefinSans10.ttf</string>
+		<string>JosefinSans11.ttf</string>
+		<string>JosefinSans12.ttf</string>
+	</array>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
@@ -31,8 +47,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
