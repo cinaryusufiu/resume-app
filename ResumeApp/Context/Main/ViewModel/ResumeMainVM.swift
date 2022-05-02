@@ -20,8 +20,9 @@ final class ResumeMainVM: ResumeBaseVM {
         return ResumeBaseVMConstant(screenName: "ResumeList Page" , analyticsName: "main")
     }
 
-    init(models: [ResumeModel]) {
-        self.models = models
+    override init() {
+        super.init()
+        self.models = UserDefaults.standard.getUserModel()?.resumeList ?? []
     }
     
     func itemVM(index: Int) -> ResumeMainItemVM? {
@@ -37,8 +38,7 @@ final class ResumeMainVM: ResumeBaseVM {
     
     func fetchData() {
         AppHUD.shared.show()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            // for call update ui
+        delay(1) {
             AppHUD.shared.hide()
             self.state?(.success)
         }

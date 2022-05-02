@@ -55,8 +55,9 @@ final class ResumeMainPageCell: ResumeBaseCVCell {
         return label
     }()
     
-    override func configureView() {
-        super.configureView()
+    override func configureUI() {
+        super.configureUI()
+        self.layer.cornerRadius = 12
         self.backgroundColor = .clear
         addSubview(labelTitle)
         addSubview(labelName)
@@ -85,9 +86,11 @@ final class ResumeMainPageCell: ResumeBaseCVCell {
     }
     
     private func updateUI(){
-        self.layer.cornerRadius = 12
+       
         guard let viewModel = viewModel else { return }
-         
-        
+        labelTitle.text = viewModel.resumeTitle
+        labelName.text = viewModel.name
+        labelEmail.text = viewModel.email
+        labelDesc.text = viewModel.resumeDesc
     }
 }

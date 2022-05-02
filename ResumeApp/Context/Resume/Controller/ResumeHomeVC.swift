@@ -16,6 +16,7 @@ final class ResumeHomeVC: ResumeBaseVC<ResumeHomePage , ResumeHomeVM > {
         theme.isCloseNavBar = false
         theme.backBtnColor = AppColor.white
         theme.navBarColor = AppColor.dusk
+        theme.isCloseBtnHidden = false
         theme.headerTitle = viewModel.constant.screenName
         return theme
     }
@@ -34,7 +35,12 @@ final class ResumeHomeVC: ResumeBaseVC<ResumeHomePage , ResumeHomeVM > {
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareUIView()
-        self.view.backgroundColor = AppColor.darkBlueGrey
+        self.view.backgroundColor = AppColor.blueyGrey
+        
+        viewPage.didTappedEditAddressButton = {[weak self] in
+            let resumeAddressVC = ResumeAddressVC()
+            self?.navigationController?.pushViewController(resumeAddressVC, animated: true)
+        }
     }
     
     private func prepareUIView(){
@@ -43,47 +49,5 @@ final class ResumeHomeVC: ResumeBaseVC<ResumeHomePage , ResumeHomeVM > {
             maker.bottom.leading.trailing.equalToSuperview()
         }
         viewPage.topAnchor.constraint(equalTo: headerBottomAnchor).isActive = true
-    }
-}
-
-import UIKit
-
-final class ResumeHomePage: ResumePageView {
-
-    var viewModel: ResumeHomeVM?
-     
-    override func configureUI() {
-        super.configureUI()
-        configureScrollView()
-        prepareSubview()
-        prepareUIAnchor()
-    }
-    
-    override func updateUI() {
-        super.updateUI()
-       
-    }
-    
-    //MARK: - Private Functions
-    private func prepareSubview(){
-
-    }
-    
-    private func prepareUIAnchor(){
-        
-      
-    }
-}
-
-
-import Foundation
-
-final class ResumeHomeVM: ResumeBaseVM {
-    
-    private var model: ResumeModel?
-    
-    override var constant: ResumeBaseVMConstant {
-       
-        return ResumeBaseVMConstant(screenName: "Create Resume Page" , analyticsName: "createResume")
     }
 }

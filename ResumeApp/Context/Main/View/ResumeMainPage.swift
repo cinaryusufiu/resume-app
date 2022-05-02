@@ -16,7 +16,7 @@ final class ResumeMainPage: ResumePageView {
     }
     
     var didTappedCell: ((_ index: Int) -> ())?
-    var didTappedCreateResume: (() -> ())?
+    var didTappedCreateResume: CompletionBlock?
     
     private struct Constant {
         static let spacing: CGFloat = 12
@@ -82,7 +82,7 @@ extension ResumeMainPage: UICollectionViewDataSource , UICollectionViewDelegate 
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10 //viewModel?.numberOfItems() ?? 0
+        return viewModel?.numberOfItems() ?? 0
     }
     
     // MARK: - UICollectionViewDelegate

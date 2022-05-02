@@ -9,10 +9,10 @@ import Foundation
 
 struct UserModel: Codable {
    
-    struct AdressModel: Codable {
+    struct AddressModel: Codable {
         let id: String?
         let name: String?
-        let desc: String?
+        let addrDesc: String?
     }
     
     struct CareerTargetModel: Codable {
@@ -25,6 +25,7 @@ struct UserModel: Codable {
     var phoneNumber: String?
     var email: String?
     var resumeList: [ResumeModel]?
-    //Career object
-    var address: AdressModel?
+    
+    var address: AddressModel?
+    var projectList: [ProjectModel]?
 }

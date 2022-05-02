@@ -15,3 +15,9 @@ extension UINavigationController {
         return navBarHeight
     }
 }
+
+func delay(_ time: Double, _ completion: @escaping () -> Void) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + time) {
+        completion()
+    }
+}

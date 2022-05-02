@@ -27,7 +27,7 @@ final class ResumeUserVC: ResumeBaseVC<ResumeUserPage , ResumeUserVM > {
         if let viewModel = self.vModel {
             self.viewModel = (viewModel as! ResumeUserVM)
         }else {
-            self.viewModel = ResumeUserVM()
+            self.viewModel = ResumeUserVM(model: nil)
         }
         viewPage = ResumeUserPage()
         viewPage.viewModel = viewModel

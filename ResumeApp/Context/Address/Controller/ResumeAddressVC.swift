@@ -1,28 +1,29 @@
 //
-//  ResumeMainVC.swift
+//  AdressVC.swift
 //  ResumeApp
 //
-//  Created by Yusuf Çınar on 29.04.2022.
+//  Created by Yusuf Çınar on 1.05.2022.
 //
 
 import UIKit
 
-final class ResumeMainVC: ResumeBaseVC<ResumeMainPage , ResumeMainVM > {
+final class ResumeAddressVC: ResumeBaseVC<ResumeAddressPage , ResumeAddressVM > {
     
-    weak var coordinator: ResumeMainPageCoordinator?
+ //   weak var coordinator: ResumeFlowCoordinator?
     
     override var theme: ResumeVCTheme {
         var theme = ResumeVCTheme()
         theme.isCloseNavBar = false
         theme.backBtnColor = AppColor.white
         theme.navBarColor = AppColor.dusk
+        theme.isBackBtnHidden = false
         theme.headerTitle = viewModel.constant.screenName
         return theme
     }
     
     override func loadView() {
-        self.viewModel = ResumeMainVM()
-        viewPage = ResumeMainPage()
+        self.viewModel = ResumeAddressVM()
+        viewPage = ResumeAddressPage()
         viewPage.viewModel = viewModel
         super.loadView()
     }
@@ -30,14 +31,13 @@ final class ResumeMainVC: ResumeBaseVC<ResumeMainPage , ResumeMainVM > {
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareUIView()
-        self.viewModel.fetchData()
         
-        viewPage.didTappedCreateResume = { [weak self ] in
-            self?.coordinator?.startCreateResume()
-        }
-        
-        viewPage.didTappedCell = { [weak self ] (index) in
-            self?.coordinator?.startEditResume()
+        viewPage.didTappedSaveButton = {[weak self] (model) in
+            guard let self = self else { return }
+            self.viewModel.saveUserModel(newAddressModel: model)
+            if self.viewModel.checkAddress {
+                self.navigationController?.popViewController(animated: true)
+            }
         }
     }
     
@@ -48,9 +48,5 @@ final class ResumeMainVC: ResumeBaseVC<ResumeMainPage , ResumeMainVM > {
         }
         viewPage.topAnchor.constraint(equalTo: headerBottomAnchor).isActive = true
     }
-    
-    override func updateUI() {
-        super.updateUI()
-        self.viewPage.updateUI()
-    }
 }
+

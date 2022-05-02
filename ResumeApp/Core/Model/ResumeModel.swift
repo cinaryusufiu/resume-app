@@ -19,10 +19,9 @@ struct ResumeModel: Codable {
         let duration: Float?
     }
     
-  //  let id: String
+    let id: String
     var title: String?
     var desc: String?
-    var userSummary: UserModel?
     var totalExperience: Float = 0
     var workSummaryList: [WorkSummaryModel]?
 }

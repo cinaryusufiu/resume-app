@@ -7,10 +7,8 @@
 
 import Foundation
 
-import Foundation
-
 struct AppConstant {
     
-    static let API_PROD_URL: String = "http://213.128.76.206:8090/api/v1/"
+    static let API_PROD_URL: String = ""
 }
 

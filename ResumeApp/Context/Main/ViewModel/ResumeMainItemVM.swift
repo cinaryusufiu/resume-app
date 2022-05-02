@@ -15,19 +15,19 @@ class ResumeMainItemVM: ResumeBaseVM {
         self.model = model
     }
     
-    var resumeUserName: String {
-        return model.userSummary?.name ?? String()
+    var name: String? {
+        return   UserDefaults.standard.getUserModel()?.name
     }
     
-    var resumeTitle: String {
+    var resumeTitle: String? {
         return model.title ?? String()
     }
     
-    var resumeDesc: String {
+    var resumeDesc: String? {
         return model.desc ?? ""
     }
 
-    var email: String {
-        return model.userSummary?.email ?? ""
+    var email: String? {
+        return UserDefaults.standard.getUserModel()?.email
     }
 }

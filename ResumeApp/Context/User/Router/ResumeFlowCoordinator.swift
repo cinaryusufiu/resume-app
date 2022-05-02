@@ -41,6 +41,11 @@ final class ResumeFlowCoordinator: Coordinator {
         parentCoordinator?.navigationController.present(navigationController, animated: true, completion: nil)
     }
     
+    func startAddressPage(){
+        let resumeAddressVC = ResumeAddressVC()
+        navigationController.pushViewController(resumeAddressVC, animated: true)
+    }
+    
     func goToResumeHome(){
         let resumeUserVC = ResumeUserVC()
         resumeUserVC.coordinator = self

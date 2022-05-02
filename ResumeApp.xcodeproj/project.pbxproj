@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		8F167990275FED7F738D0905 /* Pods_ResumeAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223B93EC02446E9969E05F70 /* Pods_ResumeAppTests.framework */; };
 		A7277C75B027CBA23BC34397 /* Pods_ResumeApp_ResumeAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE44B910B8914F6237FEEAD3 /* Pods_ResumeApp_ResumeAppUITests.framework */; };
+		C40846D1281EFCFF0047D95C /* ResumeHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40846D0281EFCFF0047D95C /* ResumeHomePage.swift */; };
+		C40846D3281EFD1E0047D95C /* ResumeHomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40846D2281EFD1E0047D95C /* ResumeHomeVM.swift */; };
+		C40846D5281EFE6D0047D95C /* UserInfoContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40846D4281EFE6D0047D95C /* UserInfoContainerView.swift */; };
+		C40846D7281F37560047D95C /* AdresInfoContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40846D6281F37560047D95C /* AdresInfoContainerView.swift */; };
+		C40846D9281F4B260047D95C /* ResumeAddressVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40846D8281F4B260047D95C /* ResumeAddressVM.swift */; };
+		C40846DC281F4B490047D95C /* ResumeAddressPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40846DB281F4B490047D95C /* ResumeAddressPage.swift */; };
+		C40846E3281F55FD0047D95C /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40846E2281F55FD0047D95C /* ProjectModel.swift */; };
+		C40846E8281F56C60047D95C /* ResumeProjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40846E7281F56C60047D95C /* ResumeProjectVC.swift */; };
+		C40846EB281F57150047D95C /* ResumeProjectPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40846EA281F57150047D95C /* ResumeProjectPage.swift */; };
+		C40846EE281F5A890047D95C /* ResumeProjectVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40846ED281F5A890047D95C /* ResumeProjectVM.swift */; };
+		C40846F0281F5DC90047D95C /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40846EF281F5DC90047D95C /* AppColor.swift */; };
 		C40A3B9F281BE60200049716 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40A3B9E281BE60200049716 /* AppDelegate.swift */; };
 		C40A3BA3281BE60200049716 /* ResumeSplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40A3BA2281BE60200049716 /* ResumeSplashVC.swift */; };
 		C40A3BA8281BE60400049716 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C40A3BA7281BE60400049716 /* Assets.xcassets */; };
@@ -67,8 +78,8 @@
 		C40A3C59281EAFDF00049716 /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40A3C58281EAFDF00049716 /* AlertVC.swift */; };
 		C40A3C5C281EB01400049716 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40A3C5B281EB01400049716 /* AlertHelper.swift */; };
 		C40A3C5E281EB02900049716 /* AlertHelperVCAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40A3C5D281EB02900049716 /* AlertHelperVCAnimation.swift */; };
-		C40A3C65281EE66E00049716 /* AddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40A3C64281EE66E00049716 /* AddressVC.swift */; };
-		C40A3C68281EE71600049716 /* ResumeCreateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40A3C67281EE71600049716 /* ResumeCreateCoordinator.swift */; };
+		C40A3C65281EE66E00049716 /* ResumeAddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40A3C64281EE66E00049716 /* ResumeAddressVC.swift */; };
+		C40A3C68281EE71600049716 /* ResumeFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40A3C67281EE71600049716 /* ResumeFlowCoordinator.swift */; };
 		C40A3C6B281EE9E800049716 /* ResumeHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40A3C6A281EE9E800049716 /* ResumeHomeVC.swift */; };
 		D5C362EB6953EE878AE7367F /* Pods_ResumeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93892125BF00B2091D71F49A /* Pods_ResumeApp.framework */; };
 /* End PBXBuildFile section */
@@ -97,6 +108,17 @@
 		3CF6FD3881279071B9CE7275 /* Pods-ResumeApp-ResumeAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResumeApp-ResumeAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-ResumeApp-ResumeAppUITests/Pods-ResumeApp-ResumeAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		70DCE87B3AD13A0A3AF994A1 /* Pods-ResumeAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResumeAppTests.release.xcconfig"; path = "Target Support Files/Pods-ResumeAppTests/Pods-ResumeAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		93892125BF00B2091D71F49A /* Pods_ResumeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResumeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C40846D0281EFCFF0047D95C /* ResumeHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeHomePage.swift; sourceTree = "<group>"; };
+		C40846D2281EFD1E0047D95C /* ResumeHomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeHomeVM.swift; sourceTree = "<group>"; };
+		C40846D4281EFE6D0047D95C /* UserInfoContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoContainerView.swift; sourceTree = "<group>"; };
+		C40846D6281F37560047D95C /* AdresInfoContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdresInfoContainerView.swift; sourceTree = "<group>"; };
+		C40846D8281F4B260047D95C /* ResumeAddressVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeAddressVM.swift; sourceTree = "<group>"; };
+		C40846DB281F4B490047D95C /* ResumeAddressPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeAddressPage.swift; sourceTree = "<group>"; };
+		C40846E2281F55FD0047D95C /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
+		C40846E7281F56C60047D95C /* ResumeProjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeProjectVC.swift; sourceTree = "<group>"; };
+		C40846EA281F57150047D95C /* ResumeProjectPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeProjectPage.swift; sourceTree = "<group>"; };
+		C40846ED281F5A890047D95C /* ResumeProjectVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResumeProjectVM.swift; path = ../../../../../../../../Documents/ResumeProjectVM.swift; sourceTree = "<group>"; };
+		C40846EF281F5DC90047D95C /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		C40A3B9B281BE60200049716 /* ResumeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResumeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C40A3B9E281BE60200049716 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C40A3BA2281BE60200049716 /* ResumeSplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeSplashVC.swift; sourceTree = "<group>"; };
@@ -161,8 +183,8 @@
 		C40A3C58281EAFDF00049716 /* AlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
 		C40A3C5B281EB01400049716 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		C40A3C5D281EB02900049716 /* AlertHelperVCAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelperVCAnimation.swift; sourceTree = "<group>"; };
-		C40A3C64281EE66E00049716 /* AddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressVC.swift; sourceTree = "<group>"; };
-		C40A3C67281EE71600049716 /* ResumeCreateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeCreateCoordinator.swift; sourceTree = "<group>"; };
+		C40A3C64281EE66E00049716 /* ResumeAddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeAddressVC.swift; sourceTree = "<group>"; };
+		C40A3C67281EE71600049716 /* ResumeFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeFlowCoordinator.swift; sourceTree = "<group>"; };
 		C40A3C6A281EE9E800049716 /* ResumeHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeHomeVC.swift; sourceTree = "<group>"; };
 		D9D4A5DA3CF09FE7EBCB9419 /* Pods-ResumeApp-ResumeAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResumeApp-ResumeAppUITests.release.xcconfig"; path = "Target Support Files/Pods-ResumeApp-ResumeAppUITests/Pods-ResumeApp-ResumeAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DE44B910B8914F6237FEEAD3 /* Pods_ResumeApp_ResumeAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResumeApp_ResumeAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,6 +240,75 @@
 				223B93EC02446E9969E05F70 /* Pods_ResumeAppTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C40846CC281EFCD90047D95C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C40846D0281EFCFF0047D95C /* ResumeHomePage.swift */,
+				C40846D4281EFE6D0047D95C /* UserInfoContainerView.swift */,
+				C40846D6281F37560047D95C /* AdresInfoContainerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C40846CD281EFCDE0047D95C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C40846D2281EFD1E0047D95C /* ResumeHomeVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C40846CE281EFCE30047D95C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C40A3C6A281EE9E800049716 /* ResumeHomeVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C40846E1281F55C90047D95C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C40846E2281F55FD0047D95C /* ProjectModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C40846E5281F569B0047D95C /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				C40846E1281F55C90047D95C /* Model */,
+				C40846EC281F57700047D95C /* ViewModel */,
+				C40846E9281F57010047D95C /* View */,
+				C40846E6281F56A30047D95C /* Controller */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		C40846E6281F56A30047D95C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C40846E7281F56C60047D95C /* ResumeProjectVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C40846E9281F57010047D95C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C40846EA281F57150047D95C /* ResumeProjectPage.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C40846EC281F57700047D95C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C40846ED281F5A890047D95C /* ResumeProjectVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		C40A3B92281BE60200049716 = {
@@ -278,6 +369,7 @@
 		C40A3BCE281C0A7B00049716 /* Context */ = {
 			isa = PBXGroup;
 			children = (
+				C40846E5281F569B0047D95C /* Project */,
 				C40A3C69281EE9D300049716 /* Resume */,
 				C40A3C5F281EE62700049716 /* Address */,
 				C40A3C50281EAF4900049716 /* Alert */,
@@ -472,6 +564,7 @@
 			isa = PBXGroup;
 			children = (
 				C40A3BF3281C0DD100049716 /* AppFont.swift */,
+				C40846EF281F5DC90047D95C /* AppColor.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -652,6 +745,7 @@
 		C40A3C60281EE63000049716 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C40846DB281F4B490047D95C /* ResumeAddressPage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -659,6 +753,7 @@
 		C40A3C61281EE63400049716 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C40846D8281F4B260047D95C /* ResumeAddressVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -666,7 +761,7 @@
 		C40A3C62281EE64F00049716 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C40A3C64281EE66E00049716 /* AddressVC.swift */,
+				C40A3C64281EE66E00049716 /* ResumeAddressVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -674,7 +769,7 @@
 		C40A3C66281EE6F800049716 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				C40A3C67281EE71600049716 /* ResumeCreateCoordinator.swift */,
+				C40A3C67281EE71600049716 /* ResumeFlowCoordinator.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -682,7 +777,9 @@
 		C40A3C69281EE9D300049716 /* Resume */ = {
 			isa = PBXGroup;
 			children = (
-				C40A3C6A281EE9E800049716 /* ResumeHomeVC.swift */,
+				C40846CE281EFCE30047D95C /* Controller */,
+				C40846CD281EFCDE0047D95C /* ViewModel */,
+				C40846CC281EFCD90047D95C /* View */,
 			);
 			path = Resume;
 			sourceTree = "<group>";
@@ -941,22 +1038,30 @@
 			files = (
 				C40A3C4A281E2BCD00049716 /* ResumeUserVM.swift in Sources */,
 				C40A3C23281C35DA00049716 /* UICollectionView+Extension.swift in Sources */,
+				C40846D3281EFD1E0047D95C /* ResumeHomeVM.swift in Sources */,
 				C40A3C3C281D8D5B00049716 /* ResumeMainVM.swift in Sources */,
 				C40A3C2D281D62C400049716 /* UserModel.swift in Sources */,
 				C40A3C37281D8B7200049716 /* ResumeMainPageCoordinator.swift in Sources */,
 				C40A3C52281EAF5300049716 /* AlertPage.swift in Sources */,
 				C40A3BFA281C0EA600049716 /* AppCoordinator.swift in Sources */,
+				C40846EB281F57150047D95C /* ResumeProjectPage.swift in Sources */,
+				C40846D9281F4B260047D95C /* ResumeAddressVM.swift in Sources */,
 				C40A3BF8281C0E6A00049716 /* AppDelegate+Extension.swift in Sources */,
 				C40A3C08281C15BA00049716 /* UINavigationController+Extension.swift in Sources */,
-				C40A3C68281EE71600049716 /* ResumeCreateCoordinator.swift in Sources */,
+				C40A3C68281EE71600049716 /* ResumeFlowCoordinator.swift in Sources */,
 				C40A3C01281C12FC00049716 /* ResumeBaseVC.swift in Sources */,
 				C40A3C55281EAF7800049716 /* AlertVM.swift in Sources */,
 				C40A3C59281EAFDF00049716 /* AlertVC.swift in Sources */,
+				C40846D7281F37560047D95C /* AdresInfoContainerView.swift in Sources */,
 				C40A3C13281C1E2800049716 /* ResumeVCTheme.swift in Sources */,
+				C40846E3281F55FD0047D95C /* ProjectModel.swift in Sources */,
+				C40846EE281F5A890047D95C /* ResumeProjectVM.swift in Sources */,
 				C40A3C4D281E2BEC00049716 /* ResumeUserPage.swift in Sources */,
 				C40A3C39281D8C5A00049716 /* ResumeBaseCVCell.swift in Sources */,
 				C40A3C46281E2AB300049716 /* ResumeUserVC.swift in Sources */,
 				C40A3C31281D664E00049716 /* UIViewController+Extension.swift in Sources */,
+				C40846D5281EFE6D0047D95C /* UserInfoContainerView.swift in Sources */,
+				C40846F0281F5DC90047D95C /* AppColor.swift in Sources */,
 				C40A3C5E281EB02900049716 /* AlertHelperVCAnimation.swift in Sources */,
 				C40A3BFF281C128700049716 /* ResumeSplashPage.swift in Sources */,
 				C40A3C1C281C34FA00049716 /* AppConstant.swift in Sources */,
@@ -965,14 +1070,17 @@
 				C40A3C29281D61B900049716 /* UserDefault+Extension.swift in Sources */,
 				C40A3C6B281EE9E800049716 /* ResumeHomeVC.swift in Sources */,
 				C40A3C2F281D62E200049716 /* ResumeModel.swift in Sources */,
+				C40846E8281F56C60047D95C /* ResumeProjectVC.swift in Sources */,
 				C40A3C1F281C352100049716 /* AppHUD.swift in Sources */,
 				C40A3C3F281D8D9D00049716 /* ResumeMainPageCell.swift in Sources */,
 				C40A3BF4281C0DD100049716 /* AppFont.swift in Sources */,
 				C40A3C25281D60F600049716 /* ResumeButton.swift in Sources */,
-				C40A3C65281EE66E00049716 /* AddressVC.swift in Sources */,
+				C40A3C65281EE66E00049716 /* ResumeAddressVC.swift in Sources */,
 				C40A3C4F281EADB800049716 /* UIView+Extension.swift in Sources */,
 				C40A3C5C281EB01400049716 /* AlertHelper.swift in Sources */,
 				C40A3BF2281C0C1000049716 /* ResumePageView.swift in Sources */,
+				C40846DC281F4B490047D95C /* ResumeAddressPage.swift in Sources */,
+				C40846D1281EFCFF0047D95C /* ResumeHomePage.swift in Sources */,
 				C40A3C34281D688600049716 /* ResumeMainPage.swift in Sources */,
 				C40A3BA3281BE60200049716 /* ResumeSplashVC.swift in Sources */,
 				C40A3C06281C14A500049716 /* UIFont+Extension.swift in Sources */,

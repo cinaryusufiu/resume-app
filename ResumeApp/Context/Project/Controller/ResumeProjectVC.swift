@@ -1,13 +1,13 @@
 //
-//  ResumeMainVC.swift
+//  ResumeProjectVC.swift
 //  ResumeApp
 //
-//  Created by Yusuf Çınar on 29.04.2022.
+//  Created by Yusuf Çınar on 2.05.2022.
 //
 
 import UIKit
 
-final class ResumeMainVC: ResumeBaseVC<ResumeMainPage , ResumeMainVM > {
+final class ResumeProjectVC: ResumeBaseVC<ResumeProjectPage , ResumeProjectVM > {
     
     weak var coordinator: ResumeMainPageCoordinator?
     
@@ -21,8 +21,12 @@ final class ResumeMainVC: ResumeBaseVC<ResumeMainPage , ResumeMainVM > {
     }
     
     override func loadView() {
-        self.viewModel = ResumeMainVM()
-        viewPage = ResumeMainPage()
+        if let viewModel = self.vModel {
+            self.viewModel = (viewModel as! ResumeProjectVM)
+        }else {
+            self.viewModel = ResumeProjectVM(model: nil)
+        }
+        viewPage = ResumeProjectPage()
         viewPage.viewModel = viewModel
         super.loadView()
     }
@@ -30,15 +34,7 @@ final class ResumeMainVC: ResumeBaseVC<ResumeMainPage , ResumeMainVM > {
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareUIView()
-        self.viewModel.fetchData()
-        
-        viewPage.didTappedCreateResume = { [weak self ] in
-            self?.coordinator?.startCreateResume()
-        }
-        
-        viewPage.didTappedCell = { [weak self ] (index) in
-            self?.coordinator?.startEditResume()
-        }
+    
     }
     
     private func prepareUIView(){
@@ -47,10 +43,5 @@ final class ResumeMainVC: ResumeBaseVC<ResumeMainPage , ResumeMainVM > {
             maker.bottom.leading.trailing.equalToSuperview()
         }
         viewPage.topAnchor.constraint(equalTo: headerBottomAnchor).isActive = true
-    }
-    
-    override func updateUI() {
-        super.updateUI()
-        self.viewPage.updateUI()
     }
 }

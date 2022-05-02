@@ -11,6 +11,10 @@ final class ResumeUserVM: ResumeBaseVM {
     
     private var model: UserModel?
     
+    init(model: UserModel?) {
+        self.model = model
+    }
+    
     var checkUser: Bool {
         return UserDefaults.standard.getUserModel() != nil ? true : false
     }
